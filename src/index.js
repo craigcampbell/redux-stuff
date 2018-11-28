@@ -7,6 +7,7 @@ import * as serviceWorker from './serviceWorker';
 import alertsReducer  from './reducers/alerts-reducer';
 import resourceReducer  from './reducers/resource-reducer';
 import serverMemoryReducer  from './reducers/server-memory-reducer';
+import alertThresholdReducer from './reducers/alertTheshold-reducer';
 
 import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
@@ -14,13 +15,15 @@ import { Provider } from 'react-redux';
 
 const allReducers = combineReducers({
     alerts: alertsReducer,
+    alertThreshold : alertThresholdReducer,
     resources: resourceReducer,
-    serverMemory: serverMemoryReducer
+    serverMemory: serverMemoryReducer,
 })
 
 const store = createStore(
     allReducers, {
     alerts: 'Email',
+    alertThreshold: 'Daily',
     resources: 'My Server',
     serverMemory: '32GB' 
     },

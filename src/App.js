@@ -3,6 +3,8 @@ import './App.css';
 
 import { connect } from 'react-redux';
 import { updateAlert } from './actions/alert-actions';
+import { updateAlertThreshold } from './actions/threshold-actions';
+
 
 class App extends Component {
   constructor(props) {
@@ -11,7 +13,6 @@ class App extends Component {
   } 
   onUpdateAlert(){
     this.props.onUpdateAlert('SMS');
-    console.log('clicked ' + this.props.alerts)
   }
   render() {
     console.log(this.props);
@@ -29,7 +30,7 @@ class App extends Component {
           {this.props.serverMemory}
           </li>
           <li>
-          {this.props.alerts}<br/>
+          {this.props.alerts}<br/>{this.props.alertThreshold}<br/>
           <button onClick={this.onUpdateAlert}>Update Alert Type</button>
      
           </li>
