@@ -16,24 +16,28 @@ class ServerDialog extends Component {
       }
     render() {
         console.log('inside the render function', this.props.alerts.alertType)
+   
         return (
         <div className='serverDialog'>
         <ul>
             <li>
-              {this.props.resources}
+              <strong>{this.props.resources}</strong>
             </li>
             <li> 
-              {this.props.serverMemory.memory}
+              
             </li>
             <li>
-              {this.props.alerts.alertType}<br/>{this.props.alertThreshold}<br/>
+
+              {this.props.alerts.alertType} <br/> {this.props.alertThreshold}<br/>
               <button onClick={this.onUpdateAlert}>Update Alert Type</button>
             </li>
             <li>
+           
             <SelectForm />
             </li>
             
         </ul>
+        <button>Change Alert Settings For:{this.props.resources}</button>
     </div>
     
     )

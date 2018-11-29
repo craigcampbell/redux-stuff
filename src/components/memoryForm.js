@@ -16,15 +16,16 @@ class SelectForm extends Component {
     }
   
     handleSubmit(event) {
-      alert('Your server memory is: ' + this.props.serverMemory.memory);
+      alert('Current Memory Allocation = ' + this.props.serverMemory.memory);
       event.preventDefault();
     }
   
     render() {
       return (
+        <div>When Memory Exceeds: {this.props.serverMemory.memory}
         <form onSubmit={this.handleSubmit}>
           <label>
-            Choose VM RAM Amount:
+           
             <select value={this.props.serverMemory.memory} onChange={this.updateMemory}>
               <option value="16">16</option>
               <option value="32">32</option>
@@ -32,8 +33,9 @@ class SelectForm extends Component {
               <option value="128">128</option>
             </select>
           </label>
-          <input type="submit" value="Submit" />
+          <button type="submit" value="Submit">Change Memory</button>
         </form>
+        </div>
       );
     }
   }
