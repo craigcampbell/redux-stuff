@@ -17,7 +17,7 @@ class ServerDialog extends Component {
     render() {
         console.log('inside the render function', this.props.alerts.alertType)
         return (
-        <div>
+        <div className='serverDialog'>
         <ul>
             <li>
               {this.props.resources}
