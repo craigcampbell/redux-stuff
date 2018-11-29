@@ -5,5 +5,5 @@ switch (type) {
         return payload;
     default:
         return state;
-    }
+  }
 }

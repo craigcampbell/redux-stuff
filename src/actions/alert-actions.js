@@ -1,4 +1,4 @@
-export const UPDATE_ALERT = 'alerts:updateAlert';
+export const UPDATE_ALERT = 'serverMemory:updateAlert';
 
 export function updateAlert(newAlert) {
     return {
