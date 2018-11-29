@@ -22,14 +22,15 @@ class App extends Component {
         IaaSOne <span className="App-page-title">&nbsp;Alerts</span>
         </header>
         
-      <ServerDialog />
-       
+      <ServerDialog guid='1' />
+      {/* <ServerDialog guid='2' />  Still working on getting the component to not share state*/}
       </div>
       
     ) 
   }
 }
 const mapStateToProps = vMstate => ({
+  guid: vMstate.guid,
   alerts: vMstate.alerts,
   resources: vMstate.resources,
   serverMemory: vMstate.serverMemory
