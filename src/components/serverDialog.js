@@ -37,7 +37,7 @@ class ServerDialog extends Component {
             </li>
             
         </ul>
-        <button>Change Alert Settings For:{this.props.resources}</button>
+        <button>Change Alert Settings For:<br/>{this.props.resources}</button>
     </div>
     
     )
