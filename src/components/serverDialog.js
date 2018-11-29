@@ -27,9 +27,9 @@ class ServerDialog extends Component {
               
             </li>
             <li>
-
-              {this.props.alerts.alertType} <br/> {this.props.alertThreshold}<br/>
+              {this.props.alerts.alertType} <br/>
               <button onClick={this.onUpdateAlert}>Update Alert Type</button>
+              <br/> Sent: {this.props.alertThreshold}
             </li>
             <li>
            
@@ -49,7 +49,8 @@ const mapStateToProps = vMstate => ({
     guid: vMstate.id,
     alerts: vMstate.alerts,
     resources: vMstate.resources,
-    serverMemory: vMstate.ram
+    serverMemory: vMstate.ram,
+    alertThreshold: vMstate.alertThreshold
   })
   const mapActionsToProps = {
     onUpdateAlert: updateAlert
